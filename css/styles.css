@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    height: 92px;
+    background-color: #cf2b2b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    background: #eeeeee;
+}
+
+.titleHeader {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 21px;
+}
+
+.titleHeader h1 {
+    font-family: Righteous;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+}
+
+.titleHeader p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
