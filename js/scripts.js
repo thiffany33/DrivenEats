@@ -186,3 +186,9 @@ function closeOrder() {
     orderScreen.classList.remove("hidden");
     orderScreen.classList.add("closeOrderScreen");
 }
+
+function closeModal() {
+    var orderScreen = document.getElementById("orderScreen");
+    orderScreen.classList.add("hidden");
+    orderScreen.classList.remove("closeOrderScreen");
+}
