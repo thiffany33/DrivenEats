@@ -102,6 +102,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .cardContent {
@@ -128,7 +129,7 @@ body {
     font-weight: 300;
     font-size: 15px;
     color: #a6a6a6;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .cardContent span {
