@@ -16,8 +16,6 @@ const itens = {
     }]
 }
 
-var foodSelected
-
 const itemsSelected = {
     food: null,
     drink: null,
