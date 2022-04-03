@@ -56,6 +56,10 @@ var selectedCardFood = null;
 var selectedCardDrink = null;
 var selectedCardDessert = null;
 
+var food = [];
+var dessert = [];
+var drink = [];
+
 function selectFood(type, id) {
 
     if (type === "food") {
@@ -131,7 +135,12 @@ function verifyselectedItens() {
 }
 
 function closeOrder() {
-    var name = prompt("QUal o seu nome ?");
-    var adress = prompt("QUal o seu endereço ?");
+    //  var name = prompt("Qual o seu nome ?");
+    //  var adress = prompt("QUal o seu endereço ?");
+
+    food = items.find((item) => item.id === itemsSelected.food);
+    drink = items.find((item) => item.id === itemsSelected.drink);
+    dessert = items.find((item) => item.id === itemsSelected.dessert);
+
 
 }
