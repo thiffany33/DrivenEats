@@ -192,3 +192,24 @@ function closeModal() {
     orderScreen.classList.add("hidden");
     orderScreen.classList.remove("closeOrderScreen");
 }
+
+function sendOrder() {
+    var text = `
+        Olá, gostaria de fazer o pedido: 
+        - Prato: ${food.foodName}
+        - Bebida: ${drink.foodName}
+        - Sobremesa: ${dessert.foodName}
+        Total: R$${total.toFixed(2)}
+
+
+        Nome: ${nome}
+        Endereço: ${address}
+    `;
+
+    var textEncoded = encodeURIComponent(text)
+
+    var phoneNumber = "351939194540"
+
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${textEncoded}`);
+
+}
