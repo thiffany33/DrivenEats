@@ -129,3 +129,9 @@ function verifyselectedItens() {
 
     }
 }
+
+function closeOrder() {
+    var name = prompt("QUal o seu nome ?");
+    var adress = prompt("QUal o seu endereço ?");
+
+}
