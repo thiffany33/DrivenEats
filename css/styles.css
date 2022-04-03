@@ -187,3 +187,109 @@ body {
 .hidden {
     display: none;
 }
+
+.closeOrderScreen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.modalOrder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 390px;
+    background: #50d074;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.dataOrder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 95%;
+    border-radius: 9px;
+    padding: 0.75rem;
+    border: 0;
+}
+
+.dataOrder h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.dataOrderAmount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    border-radius: 9px;
+    padding: 0.4rem;
+    border: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.018em;
+    color: #ffffff;
+}
+
+.dataOrderTotal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding: 0.4rem;
+    border: 0;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.btnOk {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    width: 333px;
+    height: 52px;
+    border-radius: 50px;
+    border: none;
+    color: #50d074;
+    margin-bottom: 12px;
+}
+
+.btnCancel {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+}

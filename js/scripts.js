@@ -60,6 +60,9 @@ var food = [];
 var dessert = [];
 var drink = [];
 
+var nome = "";
+var address = "";
+
 function selectFood(type, id) {
 
     if (type === "food") {
@@ -135,12 +138,14 @@ function verifyselectedItens() {
 }
 
 function closeOrder() {
-    //  var name = prompt("Qual o seu nome ?");
-    //  var adress = prompt("QUal o seu endereço ?");
+    nome = prompt("Qual o seu nome ?");
+    adress = prompt("QUal o seu endereço ?");
 
     food = items.find((item) => item.id === itemsSelected.food);
     drink = items.find((item) => item.id === itemsSelected.drink);
     dessert = items.find((item) => item.id === itemsSelected.dessert);
 
-
+    var orderScreen = document.getElementById("orderScreen");
+    orderScreen.classList.remove("hidden");
+    orderScreen.classList.add("closeOrderScreen");
 }
