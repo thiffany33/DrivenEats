@@ -52,26 +52,66 @@ const itemsSelected = {
     dessert: null
 }
 
+var selectedCardFood = null;
+var selectedCardDrink = null;
+var selectedCardDessert = null;
+
 function selectFood(type, id) {
+
     if (type === "food") {
         foodSelected = id;
 
         itemsSelected.food = foodSelected;
+
+        if (selectedCardFood === null) {
+            var card = document.getElementById(`food${id}`);
+            card.classList.add("selected");
+            selectedCardFood = `food${id}`
+        } else {
+            var removeCard = document.getElementById(selectedCardFood);
+            removeCard.classList.remove("selected")
+            var card = document.getElementById(`food${id}`);
+            card.classList.add("selected");
+            selectedCardFood = `food${id}`
+        }
     }
 
     if (type === "drink") {
         drinkSelected = id;
 
         itemsSelected.drink = drinkSelected;
+
+        if (selectedCardDrink === null) {
+            var card = document.getElementById(`drink${id}`);
+            card.classList.add("selected");
+            selectedCardDrink = `drink${id}`
+        } else {
+            var removeCard = document.getElementById(selectedCardDrink);
+            removeCard.classList.remove("selected")
+            var card = document.getElementById(`drink${id}`);
+            card.classList.add("selected");
+            selectedCardDrink = `drink${id}`
+        }
     }
 
     if (type === "dessert") {
         dessertSelected = id;
 
         itemsSelected.dessert = dessertSelected;
+
+
+        if (selectedCardDessert === null) {
+            var card = document.getElementById(`dessert${id}`);
+            card.classList.add("selected");
+            selectedCardDessert = `dessert${id}`
+        } else {
+            var removeCard = document.getElementById(selectedCardDessert);
+            removeCard.classList.remove("selected")
+            var card = document.getElementById(`dessert${id}`);
+            card.classList.add("selected");
+            selectedCardDessert = `dessert${id}`
+        }
     }
 }
 
-function verifyselectedItens() {
-    console.log(itemsSelected)
-}
+function verifyselectedItens() {}
