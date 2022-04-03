@@ -74,6 +74,7 @@ function selectFood(type, id) {
             card.classList.add("selected");
             selectedCardFood = `food${id}`
         }
+        verifyselectedItens();
     }
 
     if (type === "drink") {
@@ -92,6 +93,7 @@ function selectFood(type, id) {
             card.classList.add("selected");
             selectedCardDrink = `drink${id}`
         }
+        verifyselectedItens();
     }
 
     if (type === "dessert") {
@@ -111,7 +113,19 @@ function selectFood(type, id) {
             card.classList.add("selected");
             selectedCardDessert = `dessert${id}`
         }
+        verifyselectedItens();
     }
 }
 
-function verifyselectedItens() {}
+function verifyselectedItens() {
+    if (itemsSelected.food != null &&
+        itemsSelected.drink != null &&
+        itemsSelected.dessert != null) {
+        var btnMoreItens = document.getElementById("btnMoreItens")
+        btnMoreItens.classList.add("hidden")
+
+        var btnCloseOrder = document.getElementById('buttomCloseOrder');
+        btnCloseOrder.classList.remove("hidden");
+
+    }
+}

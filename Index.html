@@ -159,9 +159,13 @@
         </div>
     </div>
     <div class="selectFood">
-        <button onclick="verifyselectedItens()">
+        <button id="btnMoreItens" class="buttonDisabled">
             Selecione os 3 itens<br />
             para fechar o pedido
+        </button>
+
+        <button id="buttomCloseOrder" class="hidden buttonEnabled" onclick="verifyselectedItens()">
+            Fechar pedido
         </button>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

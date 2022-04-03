@@ -152,7 +152,7 @@ body {
     left: 0;
 }
 
-.selectFood button {
+.buttonDisabled {
     width: 364px;
     height: 61px;
     background: #cbcbcb;
@@ -167,3 +167,25 @@ body {
     text-align: center;
     letter-spacing: 0.018em;
 }
+
+.buttonEnabled {
+    width: 364px;
+    height: 61px;
+    background: green;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+}
+
+.hidden {
+    display: none;
+}
+
+.enabled {}
