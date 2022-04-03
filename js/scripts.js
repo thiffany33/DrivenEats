@@ -24,22 +24,24 @@ const itemsSelected = {
     dessert: null
 }
 
-function selectFood(id) {
-    foodSelected = id;
+function selectFood(type, id) {
+    if (type === "food") {
+        foodSelected = id;
 
-    itemsSelected.food = foodSelected;
-}
+        itemsSelected.food = foodSelected;
+    }
 
-function selectDrink(id) {
-    drinkSelected = id;
+    if (type === "drink") {
+        drinkSelected = id;
 
-    itemsSelected.drink = drinkSelected;
-}
+        itemsSelected.drink = drinkSelected;
+    }
 
-function selectDessert(id) {
-    dessertSelected = id;
+    if (type === "dessert") {
+        dessertSelected = id;
 
-    itemsSelected.dessert = dessertSelected;
+        itemsSelected.dessert = dessertSelected;
+    }
 }
 
 function verifyselectedItens() {
