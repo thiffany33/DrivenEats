@@ -1,20 +1,50 @@
-const itens = {
-    food: [{
+const items = [{
         id: 1,
         foodName: "Frango Yin Yang",
-        amount: 14.90
-    }],
-    drink: [{
+        amount: 14.9,
+    },
+    {
+        id: 2,
+        foodName: "Picanha Argentina",
+        amount: 14.9,
+    },
+    {
+        id: 3,
+        foodName: "Linguiça",
+        amount: 14.9,
+    },
+    {
         id: 4,
-        foodName: "Coca cola",
-        amount: 4.90
-    }],
-    dessert: [{
+        foodName: "Coca Cola",
+        amount: 14.9,
+    },
+    {
+        id: 5,
+        foodName: "Pepsi",
+        amount: 14.9,
+    },
+    {
+        id: 6,
+        foodName: "Dolly",
+        amount: 14.9,
+    },
+    {
         id: 7,
         foodName: "Pudim",
-        amount: 7.90
-    }]
-}
+        amount: 14.9,
+    },
+    {
+        id: 8,
+        foodName: "Brownie",
+        amount: 14.9,
+    },
+    {
+        id: 9,
+        foodName: "Bolo de chocolate",
+        amount: 14.9,
+    },
+];
+
 
 const itemsSelected = {
     food: null,
