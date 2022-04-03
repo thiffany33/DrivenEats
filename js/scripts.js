@@ -45,12 +45,11 @@ const items = [{
     },
 ];
 
-
 const itemsSelected = {
     food: null,
     drink: null,
-    dessert: null
-}
+    dessert: null,
+};
 
 var selectedCardFood = null;
 var selectedCardDrink = null;
@@ -64,7 +63,6 @@ var nome = "";
 var address = "";
 
 function selectFood(type, id) {
-
     if (type === "food") {
         foodSelected = id;
 
@@ -73,13 +71,13 @@ function selectFood(type, id) {
         if (selectedCardFood === null) {
             var card = document.getElementById(`food${id}`);
             card.classList.add("selected");
-            selectedCardFood = `food${id}`
+            selectedCardFood = `food${id}`;
         } else {
             var removeCard = document.getElementById(selectedCardFood);
-            removeCard.classList.remove("selected")
+            removeCard.classList.remove("selected");
             var card = document.getElementById(`food${id}`);
             card.classList.add("selected");
-            selectedCardFood = `food${id}`
+            selectedCardFood = `food${id}`;
         }
         verifyselectedItens();
     }
@@ -92,13 +90,13 @@ function selectFood(type, id) {
         if (selectedCardDrink === null) {
             var card = document.getElementById(`drink${id}`);
             card.classList.add("selected");
-            selectedCardDrink = `drink${id}`
+            selectedCardDrink = `drink${id}`;
         } else {
             var removeCard = document.getElementById(selectedCardDrink);
-            removeCard.classList.remove("selected")
+            removeCard.classList.remove("selected");
             var card = document.getElementById(`drink${id}`);
             card.classList.add("selected");
-            selectedCardDrink = `drink${id}`
+            selectedCardDrink = `drink${id}`;
         }
         verifyselectedItens();
     }
@@ -108,44 +106,83 @@ function selectFood(type, id) {
 
         itemsSelected.dessert = dessertSelected;
 
-
         if (selectedCardDessert === null) {
             var card = document.getElementById(`dessert${id}`);
             card.classList.add("selected");
-            selectedCardDessert = `dessert${id}`
+            selectedCardDessert = `dessert${id}`;
         } else {
             var removeCard = document.getElementById(selectedCardDessert);
-            removeCard.classList.remove("selected")
+            removeCard.classList.remove("selected");
             var card = document.getElementById(`dessert${id}`);
             card.classList.add("selected");
-            selectedCardDessert = `dessert${id}`
+            selectedCardDessert = `dessert${id}`;
         }
         verifyselectedItens();
     }
 }
 
 function verifyselectedItens() {
-    if (itemsSelected.food != null &&
+    if (
+        itemsSelected.food != null &&
         itemsSelected.drink != null &&
-        itemsSelected.dessert != null) {
-        var btnMoreItens = document.getElementById("btnMoreItens")
-        btnMoreItens.classList.add("hidden")
+        itemsSelected.dessert != null
+    ) {
+        var btnMoreItens = document.getElementById("btnMoreItens");
+        btnMoreItens.classList.add("hidden");
 
-        var btnCloseOrder = document.getElementById('buttomCloseOrder');
+        var btnCloseOrder = document.getElementById("buttomCloseOrder");
         btnCloseOrder.classList.remove("hidden");
-
     }
 }
 
 function closeOrder() {
     nome = prompt("Qual o seu nome ?");
-    adress = prompt("QUal o seu endereço ?");
+    address = prompt("QUal o seu endereço ?");
 
     food = items.find((item) => item.id === itemsSelected.food);
     drink = items.find((item) => item.id === itemsSelected.drink);
     dessert = items.find((item) => item.id === itemsSelected.dessert);
 
+    total = food.amount + drink.amount + dessert.amount;
+
     var orderScreen = document.getElementById("orderScreen");
+    orderScreen.innerHTML = `
+    <div class="modalOrder">
+        <div class="dataOrder">
+            <h1>Confirme seu pedido</h1>
+            <div class="dataOrderAmount">
+                <p>Nome</p>
+                <p>${nome}</p>
+            </div>
+            <div class="dataOrderAmount">
+                <p>Endereço</p>
+                <p>${address}</p>
+            </div>
+            <div class="dataOrderAmount">
+                <p>${food.foodName}</p>
+                <p>R$${food.amount.toFixed(2)}</p>
+            </div>
+            <div class="dataOrderAmount">
+                <p>${drink.foodName}</p>
+                <p>R$${drink.amount.toFixed(2)}</p>
+            </div>
+            <div class="dataOrderAmount">
+                <p>${dessert.foodName}</p>
+                <p>R$${dessert.amount.toFixed(2)}</p>
+            </div>
+            <div class="dataOrderTotal">
+                <p>TOTAL</p>
+                <p>R$${total.toFixed(2)}</p>
+            </div>
+            <button class="btnOk" onclick="sendOrder()">
+                Tudo certo, pode pedir!
+            </button>
+            <button class="btnCancel" onclick="closeModal()">
+                Cancelar
+            </button>
+        </div>
+    </div>
+    `;
     orderScreen.classList.remove("hidden");
     orderScreen.classList.add("closeOrderScreen");
 }
