@@ -151,14 +151,6 @@ function closeOrder() {
         <div class="dataOrder">
             <h1>Confirme seu pedido</h1>
             <div class="dataOrderAmount">
-                <p>Nome</p>
-                <p>${nome}</p>
-            </div>
-            <div class="dataOrderAmount">
-                <p>Endereço</p>
-                <p>${address}</p>
-            </div>
-            <div class="dataOrderAmount">
                 <p>${food.foodName}</p>
                 <p>R$${food.amount.toFixed(2)}</p>
             </div>
@@ -173,6 +165,14 @@ function closeOrder() {
             <div class="dataOrderTotal">
                 <p>TOTAL</p>
                 <p>R$${total.toFixed(2)}</p>
+            </div>
+                <div class="dataOrderAmount">
+                <p>Nome</p>
+                <p>${nome}</p>
+            </div>
+            <div class="dataOrderAmount">
+                <p>Endereço</p>
+                <p>${address}</p>
             </div>
             <button class="btnOk" onclick="sendOrder()">
                 Tudo certo, pode pedir!
