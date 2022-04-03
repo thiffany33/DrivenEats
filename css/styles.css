@@ -43,8 +43,9 @@ body {
     margin-left: 19px;
 }
 
-.spaceTop {
+.spaceTopAndBottom {
     padding-top: 100px;
+    padding-bottom: 90px
 }
 
 .titleFoodSection {
